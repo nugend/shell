@@ -1,0 +1,20 @@
+[[ -s "$HOME/.alias.local" ]] && source "$HOME/.alias.local"
+
+alias ls='ls --color=auto'
+
+function cdf() { 
+  cd `dirname $1` 
+}
+
+function cdl() {
+  cd "$@";
+  ls;
+}
+
+function gitpatch() {
+  git diff --no-prefix -u $1^1 $2
+  }
+
+alias vi='emacsclient -c'
+
+alias info='info --vi-keys'

@@ -1,0 +1,19 @@
+[user]
+	name = Dan Nugent
+	email = nugend@gmail.com
+[alias]
+	st  = status -sb  # Provides a shorter status view
+  co  = checkout
+  ci  = commit
+  br  = branch
+	g  = log --color --graph --abbrev-commit --all --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'
+	gs  = log --color --graph --abbrev-commit --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'
+  fix = commit --amend
+	alias = config --get-regexp alias.*
+	d = diff -b --color
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[push]
+	default = upstream
