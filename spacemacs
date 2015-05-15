@@ -142,8 +142,9 @@ before layers configuration."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
-  (setq neo-smart-open nil
+  (setq neo-smart-open t
         neo-show-updir-line t
+        tab-width 2
         )
 )
 
@@ -163,18 +164,18 @@ layers configuration."
  '(evil-exchange-key "gx")
  '(eyebrowse-mode t)
  '(eyebrowse-wrap-around t)
- '(neo-auto-indent-point t t)
- '(neo-banner-message nil t)
+ '(neo-auto-indent-point t)
+ '(neo-banner-message nil)
  '(neo-click-changes-root nil)
- '(neo-create-file-auto-open t t)
- '(neo-dont-be-alone t t)
+ '(neo-create-file-auto-open t)
+ '(neo-dont-be-alone t)
  '(neo-keymap-style (quote concise))
- '(neo-persist-show nil t)
- '(neo-show-hidden-files t t)
- '(neo-show-updir-line t t)
- '(neo-smart-open nil t)
+ '(neo-persist-show nil)
+ '(neo-show-hidden-files t)
+ '(neo-show-updir-line t)
+ '(neo-smart-open t)
  '(neo-theme (quote nerd))
- '(neo-window-width 32 t)
+ '(neo-window-width 32)
  '(ring-bell-function (quote ignore) t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
