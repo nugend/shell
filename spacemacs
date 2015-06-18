@@ -25,6 +25,9 @@
      syntax-checking
      eyebrowse
      python
+     emacs-lisp
+     shell
+     pcre2el
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
@@ -162,6 +165,7 @@ layers configuration."
  '(ahs-inhibit-face-list nil)
  '(evil-exchange-cancel-key "gX")
  '(evil-exchange-key "gx")
+ '(evil-shift-width 2)
  '(eyebrowse-mode t)
  '(eyebrowse-wrap-around t)
  '(neo-auto-indent-point t)
@@ -176,6 +180,7 @@ layers configuration."
  '(neo-smart-open t)
  '(neo-theme (quote nerd))
  '(neo-window-width 32)
+ '(python-indent-offset 2)
  '(ring-bell-function (quote ignore) t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
