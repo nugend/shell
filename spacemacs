@@ -46,7 +46,9 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages then consider to create a layer, you can also put the
    ;; configuration in `dotspacemacs/config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(
+    (q-mode :location (recipe :fetcher github :repo "psaris/q-mode"))
+    )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -207,6 +209,10 @@ layers configuration. You are free to put any user code."
         neo-show-updir-line t
         tab-width 2
         )
+  (use-package q-mode
+    :mode "\\.[kq]\\'"
+    :interpreter "q"
+    )
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -226,19 +232,21 @@ layers configuration. You are free to put any user code."
  '(evil-shift-width 2)
  '(eyebrowse-mode t)
  '(eyebrowse-wrap-around t)
- '(neo-auto-indent-point t)
- '(neo-banner-message nil)
+ '(neo-auto-indent-point t t)
+ '(neo-banner-message nil t)
  '(neo-click-changes-root nil)
- '(neo-create-file-auto-open t)
- '(neo-dont-be-alone t)
+ '(neo-create-file-auto-open t t)
+ '(neo-dont-be-alone t t)
  '(neo-keymap-style (quote concise))
- '(neo-persist-show nil)
- '(neo-show-hidden-files t)
- '(neo-show-updir-line t)
- '(neo-smart-open t)
+ '(neo-persist-show nil t)
+ '(neo-show-hidden-files t t)
+ '(neo-show-updir-line t t)
+ '(neo-smart-open t t)
  '(neo-theme (quote nerd))
- '(neo-window-width 32)
+ '(neo-window-width 32 t)
  '(python-indent-offset 2)
+ '(q-comment-start "//")
+ '(q-indent-step 2)
  '(ring-bell-function (quote ignore) t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
