@@ -213,6 +213,8 @@ layers configuration. You are free to put any user code."
     :mode "\\.[kq]\\'"
     :interpreter "q"
     )
+  (evil-leader/set-key "ps" 'spacemacs/helm-project-smart-do-search)
+  (evil-leader/set-key "pS" 'spacemacs/helm-project-smart-do-search-region-or-symbol)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
