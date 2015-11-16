@@ -11,9 +11,10 @@
   fix = commit --amend
   alias = config --get-regexp alias.*
   d = diff -b --color
+  up = submodule update --init --recursive
 [diff]
   tool = vimdiff
 [difftool]
   prompt = false
 [push]
-  default = upstream
+  default = simple
