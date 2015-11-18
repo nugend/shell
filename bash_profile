@@ -6,5 +6,5 @@ if [[ -z $TMUX ]]; then
   [[ -s "$HOME/.once" ]] && source $HOME/.once
   [[ -s "$HOME/.once.local" ]] && source $HOME/.once.local
   (! emacsclient -ca false -e '(delete-frame)') && emacs --daemon
-  tmux -2
+  tmux -2 new-session -t main
 fi
