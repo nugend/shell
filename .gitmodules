@@ -1,0 +1,3 @@
+[submodule "vendor/rlwrap_remove_newline"]
+	path = vendor/rlwrap_remove_newline
+	url = https://github.com/nugend/rlwrap_remove_newline.git

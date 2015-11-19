@@ -1,0 +1,5 @@
+* autojump: https://github.com/wting/autojump
+* watchdog: https://github.com/gorakhargosh/watchdog
+* rlwrap: https://github.com/hanslub42/rlwrap
+* pyenv: https://github.com/yyuu/pyenv
+* pyenv-virtualenv: https://github.com/yyuu/pyenv-virtualenv

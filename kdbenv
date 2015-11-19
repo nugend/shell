@@ -1,0 +1,2 @@
+alias q="rlwrap --multi-line --multi-line-ext=.q --filter=$DOTSHELL/vendor/rlwrap_remove_newline/remove_newline.pl --no-warnings q"
+export QSPEC="spec.q"

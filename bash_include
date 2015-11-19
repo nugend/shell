@@ -1,0 +1,1 @@
+[[ -s "$HOME/.kdbenv"  ]] && source "$HOME/.kdbenv"
