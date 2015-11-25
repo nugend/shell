@@ -7,7 +7,6 @@ WATCHCMD=
 
 function watch {
     watchmedo shell-command -R -c "pkill -n -u `whoami` -x -f '$TESTHCMD $*'; $TESTHCMD $*" .
-
 }
 
 function qt {
