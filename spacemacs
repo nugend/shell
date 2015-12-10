@@ -205,17 +205,27 @@ user code."
   "Configuration function for user code.
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
+  ;; Make tabs the way I like, globally
   (setq neo-smart-open t
         neo-show-updir-line t
         tab-width 2
         )
+  ;; Enable KDB edit mode
   (use-package q-mode
     :mode "\\.[kq]\\'"
     :interpreter "q"
     )
+  ;; Add keybinds for project search in projectile namespace
   (evil-leader/set-key "ps" 'spacemacs/helm-project-smart-do-search)
   (evil-leader/set-key "pS" 'spacemacs/helm-project-smart-do-search-region-or-symbol)
-)
+  ;; Turn off evilified state stuff for git edit modes
+  (with-eval-after-load 'diff-mode
+    (push 'diff-mode evil-emacs-state-modes)
+    (setq evil-evilified-state-modes (delq 'diff-mode evil-evilified-state-modes)))
+  (with-eval-after-load 'git-rebase-mode
+    (push 'git-rebase-mode evil-emacs-state-modes)
+        (setq evil-evilified-state-modes (delq 'git-rebase-mode evil-evilified-state-modes)))
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -249,7 +259,8 @@ layers configuration. You are free to put any user code."
  '(python-indent-offset 2)
  '(q-comment-start "//")
  '(q-indent-step 2)
- '(ring-bell-function (quote ignore) t))
+ '(ring-bell-function (quote ignore) t)
+ '(vc-follow-symlinks t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
