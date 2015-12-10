@@ -6,7 +6,7 @@ TESTHCMD="$QSPEC --fail-hard"
 WATCHCMD=
 
 function watch {
-    watchmedo shell-command -R -c "pkill -n -u `whoami` -x -f '$TESTHCMD $*'; $TESTHCMD $*" .
+    watchmedo shell-command -R -W -c "pkill -n -u `whoami` -x -f '$TESTQCMD $*'; $TESTQCMD $*" .
 }
 
 function qt {
