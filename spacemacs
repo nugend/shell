@@ -38,7 +38,6 @@ values."
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
-     ;; pcre2el
      spell-checking
      version-control
      )
@@ -210,6 +209,7 @@ layers configuration. You are free to put any user code."
         neo-show-updir-line t
         tab-width 2
         )
+  (pcre-mode)
   ;; Enable KDB edit mode
   (use-package q-mode
     :mode "\\.[kq]\\'"
