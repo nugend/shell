@@ -17,4 +17,3 @@ eval `dircolors $HOME/.dir_colors`
 set -o vi
 shopt -s checkwinsize
 bind '"\t":menu-complete'
-bind '"\M-t":possible-completions'

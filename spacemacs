@@ -218,6 +218,9 @@ layers configuration. You are free to put any user code."
   ;; Add keybinds for project search in projectile namespace
   (evil-leader/set-key "ps" 'spacemacs/helm-project-smart-do-search)
   (evil-leader/set-key "pS" 'spacemacs/helm-project-smart-do-search-region-or-symbol)
+  ;; Temporary fix for org-cycle issue
+  (evil-define-key 'normal evil-jumper-mode-map (kbd "TAB") nil)
+  (evil-define-key 'normal evil-org-mode-map (kbd "TAB") 'org-cycle)
   ;; Turn off evilified state stuff for git edit modes
   (with-eval-after-load 'diff-mode
     (push 'diff-mode evil-emacs-state-modes)
