@@ -69,6 +69,14 @@ GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_DESCRIBE_STYLE=branch
 GIT_PS1_STATESEPARATOR=""
+# Deal with some horseshit when using TMUX that sets a double bash_prompt_command
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ;} bash_prompt_command"
+export PROMPT_COMMAND=`python -c "
+import os
+p = os.getenv('PROMPT_COMMAND')
+s = set(map(lambda x:x.strip(),p.split(';'))) if p else set()
+s.discard('bash_prompt_command')
+print(' ; '.join(list(s) + ['bash_prompt_command']))
+"`
 bash_prompt
 unset bash_prompt
