@@ -31,7 +31,6 @@ values."
      markdown
      org
      syntax-checking
-     eyebrowse
      (python :variables
              python-test-runner 'pytest)
      emacs-lisp
