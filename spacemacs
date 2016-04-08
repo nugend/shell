@@ -46,6 +46,7 @@ values."
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(
     (q-mode :location (recipe :fetcher github :repo "psaris/q-mode"))
+    toml-mode
     )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
@@ -254,6 +255,7 @@ layers configuration. You are free to put any user code."
         neo-show-updir-line t
         tab-width 2
         )
+  (setq require-final-newline nil)
   (pcre-mode)
   ;; Enable KDB edit mode
   (use-package q-mode
