@@ -1,6 +1,7 @@
 export DOTSHELL="$HOME/.shell"
 export VISUAL="emacsclient -c"
 export EDITOR="emacsclient -c"
+export ALTERNATE_EDITOR=""
 export INPUTRC=$HOME/.inputrc
 
 [[ -s "$HOME/.bashrc.local" ]] && source "$HOME/.bashrc.local"
