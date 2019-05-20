@@ -1,5 +1,6 @@
 [[ -s "$HOME/.alias.local" ]] && source "$HOME/.alias.local"
 
+alias tmuxn='tmux -2 new-session -As main'
 alias ls='ls --color=auto'
 
 function cdf() { 
