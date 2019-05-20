@@ -5,5 +5,5 @@
 if [[ -z $TMUX ]]; then
   [[ -s "$HOME/.once" ]] && source $HOME/.once
   [[ -s "$HOME/.once.local" ]] && source $HOME/.once.local
-  tmux -2 new-session -t main
+  tmux -2 new-session -As main
 fi
